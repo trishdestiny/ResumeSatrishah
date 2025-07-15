@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Satrishah Abdul Rahman | Resume</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <style>
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('images/nodes-bg.svg') center center / cover no-repeat;
+      opacity: 0.07;
+      z-index: -1;
+    }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #1e1e1e;
+      color: #d4d4d4;
+      padding: 40px 20px;
+    }
+    .resume-section {
+      margin-bottom: 50px;
+    }
+    h1, h2, h3 {
+      color: #00ffae;
+    }
+    a {
+      color: #00ffae;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    .section-title {
+      border-bottom: 2px solid #00ffae;
+      padding-bottom: 5px;
+      margin-bottom: 20px;
+    }
+    .btn-back {
+      margin-top: 20px;
+      background-color: #00ffae;
+      color: #1e1e1e;
+    }
+    .btn-back:hover {
+      background-color: #00e0a0;
+    }
+    .progress-bar {
+      background-color: #00ffae;
+    }
+    .skill-label {
+      font-weight: 500;
+      margin-top: 10px;
+    }
+    .contact-icons {
+      font-size: 1.5rem;
+      gap: 20px;
+      justify-content: center;
+      display: flex;
+      flex-wrap: wrap;
+      margin-top: 20px;
+    }
+    .contact-icons a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: radial-gradient(circle at center, #00ffae 10%, transparent 70%);
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+      padding: 10px;
+    }
+    .contact-icons a:hover {
+      transform: scale(1.2);
+      box-shadow: 0 0 12px #00ffae, 0 0 20px #00ffae inset;
+      background-color: rgba(0, 255, 174, 0.1);
+    }
+    .fade-in {
+      opacity: 1;
+      transform: translateY(0);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+    .resume-section {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    img.profile {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin-bottom: 20px;
+      border: 3px solid #00ffae;
+    }
+    canvas.bg-nodes {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      z-index: -2;
+    }
+
+
+@media print {
+  body * {
+    visibility: hidden;
+  }
+
+  #resume-section, #resume-section * {
+    visibility: visible;
+  }
+
+  #resume-section {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    padding: 20px;
+    background-color: white;
+    color: black;
+    font-family: 'Arial', sans-serif;
+  }
+
+  .resume-card {
+    border: none;
+    box-shadow: none;
+    background-color: white;
+    color: black;
+  }
+
+  .resume-card h5 {
+    margin-bottom: 5px;
+  }
+
+  .resume-card p {
+    margin-bottom: 10px;
+    font-size: 12pt;
+  }
+
+  .section-title {
+    font-size: 20pt;
+    color: black;
+    margin-bottom: 20px;
+  }
+
+  .container {
+    padding: 0;
+    margin: 0;
+  }
+
+  html, body {
+    height: auto !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    font-size: 12pt;
+  }
+
+
+  </style>
+</head>
+
+<body>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const animatedSections = document.querySelectorAll('.resume-section');
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('fade-in');
+          }
+        });
+      }, { threshold: 0.1 });
+      animatedSections.forEach(el => observer.observe(el));
+    });
+  </script>
+  <div class="container text-center">
+    <img src="Image/headshot.jpg" alt="Profile Photo" class="profile">
+    <h1 class="mb-2">Satrishah Abdul Rahman</h1>
+    <p class="mb-4">Creative tech enthusiast with a strong foundation in web development, content strategy, and digital design. Passionate about blending technical skills with storytelling to deliver engaging user experiences and meaningful impact.</p>
+
+    <div class="resume-section fade-in">
+      <h2 class="section-title">Contact</h2>
+      <div class="d-flex contact-icons">
+        <a href="mailto:trishdestiny.sd@gmail.com" target="_blank" title="Email"><img src="Image/gmail-svgrepo-com (1).svg" alt="Email" width="28"></a>
+        <a href="https://github.com/trishdestiny" target="_blank" title="GitHub"><img src="Image/github-icon-svgrepo-com.svg" alt="GitHub" width="28"></a>
+        <a href="https://www.linkedin.com/in/satrishah-abdul-rahman-907581249" target="_blank" title="LinkedIn"><img src="Image/linkedin-svgrepo-com.svg" alt="LinkedIn" width="28"></a>
+        <a href="https://wa.me/601154206797" target="_blank" title="WhatsApp"><img src="Image/whatsapp-color-svgrepo-com.svg" alt="WhatsApp" width="28"></a>
+      </div>
+    </div>
+
+    <div class="resume-section fade-in">
+      <h2 class="section-title">Skills & Tech Stack</h2>
+      <div class="text-start">
+        <div class="skill-label">HTML / CSS / Bootstrap</div>
+        <div class="progress mb-3">
+          <div class="progress-bar" role="progressbar" style="width: 90%">90%</div>
+        </div>
+        <div class="skill-label">JavaScript</div>
+        <div class="progress mb-3">
+          <div class="progress-bar" role="progressbar" style="width: 75%">75%</div>
+        </div>
+        <div class="skill-label">PHP / MySQL</div>
+        <div class="progress mb-3">
+          <div class="progress-bar" role="progressbar" style="width: 70%">70%</div>
+        </div>
+        <div class="skill-label">Python / C / C++</div>
+        <div class="progress mb-3">
+          <div class="progress-bar" role="progressbar" style="width: 65%">65%</div>
+        </div>
+        <div class="skill-label">Canva / Figma</div>
+        <div class="progress mb-3">
+          <div class="progress-bar" role="progressbar" style="width: 85%">85%</div>
+        </div>
+        <div class="skill-label">Content Creation & Social Media Marketing</div>
+        <div class="progress mb-3">
+          <div class="progress-bar" role="progressbar" style="width: 80%">80%</div>
+        </div>
+        <div class="skill-label">Languages (EN/MY/ZH/KO/FR)</div>
+        <div class="progress mb-3">
+          <div class="progress-bar" role="progressbar" style="width: 90%">90%</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="resume-section">
+      <h2 class="section-title">Certifications</h2>
+      <div class="d-grid gap-3">
+        <div>
+          <p>The Complete 2024 Web Development Bootcamp – Udemy</p>
+          <button class="btn btn-outline-success" onclick="document.getElementById('cert1').style.display='block'">View Certificate</button>
+          <img id="cert1" src="images/cert-webdev.png" class="img-fluid mt-2" alt="Web Development Certificate" style="display:none; max-width: 100%; border: 2px solid #00ffae;">
+        </div>
+        <div>
+          <p>Dart and Flutter: The Complete Guide – Udemy</p>
+          <button class="btn btn-outline-success" onclick="document.getElementById('cert2').style.display='block'">View Certificate</button>
+          <img id="cert2" src="images/cert-flutter.png" class="img-fluid mt-2" alt="Dart and Flutter Certificate" style="display:none; max-width: 100%; border: 2px solid #00ffae;">
+        </div>
+      </div>
+    </div>
+
+    <div class="resume-section">
+      <h2 class="section-title">Projects</h2>
+      <ul>
+        <li><strong>Bakery Inventory System</strong> – C (Inventory & Sales Console App)</li>
+        <li><strong>Ghibli Film Program</strong> – C++ (Film data sorting and filtering)</li>
+        <li><strong>Gym Management Program</strong> – C++ (Stack, Queue, Linked List)</li>
+        <li><strong>Nialina Fitness Website</strong> – HTML, CSS, JS, PHP (Responsive web + form handling)</li>
+      </ul>
+    </div>
+
+    <div class="resume-section fade-in">
+      <h2 class="section-title">Experience</h2>
+      <div class="card bg-dark text-start text-light mb-3 border-success">
+        <div class="card-body">
+          <h5 class="card-title text-success">Kinofit Studio</h5>
+          <h6 class="card-subtitle mb-2 text-muted">Digital Content & Creative Marketing Associate</h6>
+          <ul class="mb-0">
+            <li>Planned and executed social media campaigns and promotional events</li>
+            <li>Produced and edited marketing visuals, videos, and digital posters</li>
+            <li>Maintained the official blog and crafted strategic copy for brand storytelling</li>
+            <li>Utilized tools like Canva, Figma, and Meta Ads for outreach and branding</li>
+          </ul>
+        </div>
+      </div>
+      <div class="card bg-dark text-start text-light mb-3 border-info">
+        <div class="card-body">
+          <h5 class="card-title text-info">Econsave Trading</h5>
+          <h6 class="card-subtitle mb-2 text-muted">Store Manager</h6>
+          <ul class="mb-0">
+            <li>Supervised daily retail operations and managed a team of floor staff</li>
+            <li>Handled inventory, restocking, and invoice processing via in-house system</li>
+            <li>Implemented improved stock tracking methods using Microsoft Excel</li>
+            <li>Monitored in-store performance, reporting issues and optimizing layout</li>
+          </ul>
+        </div>
+      </div>
+      <div class="card bg-dark text-start text-light border-warning">
+        <div class="card-body">
+          <h5 class="card-title text-warning">Freelancer</h5>
+          <h6 class="card-subtitle mb-2 text-muted">Content Writer & Web Designer</h6>
+          <ul class="mb-0">
+            <li>Delivered written content for blogs, small businesses, and academic sites</li>
+            <li>Designed responsive web pages using HTML, CSS, JS, and Bootstrap</li>
+            <li>Used GitHub for version control and client code delivery</li>
+            <li>Collaborated remotely using Notion, Google Docs, and Figma</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="text-center mb-4">
+      <a href="resume.pdf" class="btn btn-outline-light me-3" id="pdfBtn">⬇ Download Resume PDF</a>
+      <noscript>
+        <a href="resume.pdf" class="btn btn-outline-light me-3" target="_blank">⬇ Download Resume PDF</a>
+      </noscript>
+    </div>
+
+    <div class="resume-section">
+      <h2 class="section-title">Education</h2>
+      <p><strong>Diploma in Information Technology</strong> – Multimedia University (MMU), Faculty of Computing & Informatics</p>
+      <ul>
+        <li>Completed coursework in subjects including Data Structures and Internet Publishing</li>
+      </ul>
+    </div>
+
+    <div class="resume-section">
+      <h2 class="section-title">Awards</h2>
+      <ul>
+        <li>Gold Award – Queen’s Commonwealth Essay Competition 2015</li>
+      </ul>
+    </div>
+
+    <div class="resume-section">
+      <h2 class="section-title">Leadership & Volunteering</h2>
+      <ul>
+        <li>Committee Member – Sarong Fun Run MMU 2024 (Organised by MMU Learning Institute & Empowerment)</li>
+        <li>Secretary / Committee – Pertubuhan Dakwah & Kebajikan Jerantut</li>
+      </ul>
+    </div>
+    <a href="index.html" class="btn btn-back">⬅ Back to Portfolio</a>
+  </div>
+  <canvas class="bg-nodes"></canvas>
+  <script>
+    // Download & open PDF on click
+    document.addEventListener('DOMContentLoaded', function () {
+      var btn = document.getElementById('pdfBtn');
+      if (btn) {
+        btn.addEventListener('click', function (e) {
+          e.preventDefault();
+          window.open('resume.pdf', '_blank');
+          var tmpLink = document.createElement('a');
+          tmpLink.href = 'resume.pdf';
+          tmpLink.setAttribute('download', 'Satrishah_Resume.pdf');
+          document.body.appendChild(tmpLink);
+          tmpLink.click();
+          document.body.removeChild(tmpLink);
+        });
+      }
+    });
+
+    // Animated background
+    const canvas = document.querySelector(".bg-nodes");
+    const ctx = canvas.getContext("2d");
+    let width, height, particles;
+
+    function resizeCanvas() {
+      width = canvas.width = window.innerWidth;
+      height = canvas.height = window.innerHeight;
+    }
+
+    function createParticles(num) {
+      return Array.from({ length: num }, () => ({
+        x: Math.random() * width,
+        y: Math.random() * height,
+        vx: (Math.random() - 0.5) * 0.5,
+        vy: (Math.random() - 0.5) * 0.5
+      }));
+    }
+
+    function animate() {
+      ctx.clearRect(0, 0, width, height);
+      for (let i = 0; i < particles.length; i++) {
+        let p = particles[i];
+        p.x += p.vx;
+        p.y += p.vy;
+
+        if (p.x < 0 || p.x > width) p.vx *= -1;
+        if (p.y < 0 || p.y > height) p.vy *= -1;
+
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, 2, 0, Math.PI * 2);
+        ctx.fillStyle = "#00ffae";
+        ctx.fill();
+
+        for (let j = i + 1; j < particles.length; j++) {
+          let q = particles[j];
+          let dx = p.x - q.x;
+          let dy = p.y - q.y;
+          let dist = Math.sqrt(dx * dx + dy * dy);
+          if (dist < 100) {
+            ctx.beginPath();
+            ctx.moveTo(p.x, p.y);
+            ctx.lineTo(q.x, q.y);
+            ctx.strokeStyle = "rgba(0,255,174," + (1 - dist / 100) + ")";
+            ctx.stroke();
+          }
+        }
+      }
+      requestAnimationFrame(animate);
+    }
+
+    window.addEventListener("resize", () => {
+      resizeCanvas();
+      particles = createParticles(75);
+    });
+
+    resizeCanvas();
+    particles = createParticles(75);
+    animate();
+  </script>
+</body>
+</html>
